@@ -139,3 +139,27 @@ p1.changeName("Laiba Khan Yousufzai")
 print(p1.name)
 print(Person.name)
 
+# CLASS METHOD
+"""
+Instead of doing it like this....
+
+class Person:
+    name = "Anonymous"
+
+    def changeName(self, name):
+        self.__class__.name = name 
+"""
+
+
+class Person:
+    name = "Anonymous"
+    @classmethod
+    def changeName(cls, name):
+        cls.name = name
+
+p1 = Person()
+p1.changeName("Laiba Khan Yousufzai")
+print(p1.name)
+print(Person.name)
+
+# PROPERTY DECORATOR
