@@ -101,3 +101,41 @@ c1 = C()
 print(c1.varA)
 print(c1.varB)
 print(c1.varC)
+
+# SUPER KEYWORD
+
+class Car:
+    def __init__(self, type):
+        self.type = type
+
+    @staticmethod
+    def start():
+        print("Car Started....")
+    
+    @staticmethod
+    def stop():
+        print("Car Stopped....")
+
+class Toyota(Car):
+    def __init__(self, name, type):
+        super().__init__(type)
+        self.name = name
+        super().start
+
+c1 = Toyota("Prius", "Electric")
+print(c1.type)
+
+# Class Method:
+
+class Person:
+    name = "Anonymous"
+
+    def changeName(self, name):
+        # Person.name = name  #first way to changen class attribute
+        self.__class__.name = name #second way to change class attribute
+
+p1 = Person()
+p1.changeName("Laiba Khan Yousufzai")
+print(p1.name)
+print(Person.name)
+
