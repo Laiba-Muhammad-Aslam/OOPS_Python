@@ -105,3 +105,20 @@ class Solution:
             return False
         else:
             return False
+
+'''Write a Python function that takes a string and returns the number of vowels (a, e, i, o, u) in the string.
+Input: "hello world"  
+Output: 3
+'''
+
+def vowelsCount(str):
+    vowelsList = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+    for char in str:
+        if char.lower() in vowelsList:
+            count +=1
+    return count
+
+print(vowelsCount("hello world"))
+
+
