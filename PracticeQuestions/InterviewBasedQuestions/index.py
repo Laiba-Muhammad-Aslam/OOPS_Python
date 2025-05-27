@@ -121,4 +121,17 @@ def vowelsCount(str):
 
 print(vowelsCount("hello world"))
 
+"""Reverse a string"""
+
+def reverseString(str):
+    arr = list(str)
+    reversed_arr = []
+    for i in range(len(arr) - 1, -1, -1):  
+        reversed_arr.append(arr[i])
+    reversed_str = ''.join(reversed_arr)
+    return reversed_str
+
+
+print(reverseString("Laiba"))
+
 
